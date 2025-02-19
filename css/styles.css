@@ -1,0 +1,535 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Space Background */
+body {
+  background: black;
+  color: white;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+/* Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #00aaff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+  text-shadow: 0 0 10px #00aaff;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 100px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.name {
+  color: #00aaff;
+  text-shadow: 0 0 10px #00aaff;
+}
+
+.typing-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  height: 40px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #fff;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00aaff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 170, 255, 0.4);
+}
+
+.btn:hover {
+  background: #0088cc;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.6);
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Poppins", sans-serif; /* Modern and clean font */
+  background: linear-gradient(90deg, #00d2ff, #3a47d5);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+}
+
+.social-icons .icon {
+  display: inline-block;
+  margin: 0 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons .icon:hover {
+  color: #00aaff;
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Page */
+.about {
+  height: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  padding-top: 130px;
+  width: 100%;
+  background: linear-gradient(120deg, #16213e, #1a1a2e);
+}
+
+.about-container {
+  display: flex;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
+  border: 3px solid #00aaff;
+}
+
+.about-content {
+  margin-left: 30px;
+  color: white;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: #00aaff;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list li {
+  list-style: none;
+  background: #00aaff;
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.skills-list li:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  padding: 100px 50px 50px; /* Added top padding to prevent overlap */
+  background: #000000;
+  color: white;
+  min-height: auto; /* Ensure full height */
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Project Card */
+.project {
+  background: rgba(255, 255, 255, 0.1);
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.6s ease-out; /* Smooth height transition */
+  overflow: hidden; /* Prevent sudden jump */
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  width: 50%;
+  border-radius: 10px;
+  padding-bottom: 2%;
+}
+
+.protext {
+  height: 60%;
+  padding: 10px;
+}
+
+.protext p {
+  padding-top: 8px;
+}
+
+.project-info {
+  flex-grow: 1; /* Ensures uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px; /* Set a minimum height */
+}
+
+.project-info h3 {
+  color: #00aaff;
+}
+
+.tech-stack {
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation on hover */
+.project:hover .tech-stack {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Optional Glow Effect */
+.tech-stack b {
+  color: #00aaff;
+  text-shadow: 0 0 10px rgba(0, 170, 255, 0.7);
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 8px 15px;
+  background: #00aaff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0088cc;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects {
+    padding: 80px 20px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 10px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none; /* Ensures modal is hidden initially */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px); /* Blur effect */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden; /* Prevents background scrolling */
+}
+
+/* When Modal is Active */
+.modal.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background: rgba(40, 40, 40);
+  padding: 20px;
+  width: 50%;
+  max-height: 80vh; /* Limits modal height */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  overflow-y: auto; /* Enables scrolling when content exceeds height */
+  scrollbar-width: thin; /* Makes scrollbar visible but thin */
+  scrollbar-color: #888 #ddd; /* Custom scrollbar color */
+}
+
+/* WebKit-based browsers (Chrome, Safari) */
+.modal-content::-webkit-scrollbar {
+  width: 8px; /* Sets the scrollbar width */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #ddd; /* Track color */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 4px; /* Rounded scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker on hover */
+}
+
+/* Show Animation */
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Close Button */
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Animation for Modal */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Image Gallery */
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-item {
+  text-align: center;
+}
+
+.image-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px;
+  background: #1a1a2e;
+  color: white;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #00aaff;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+button {
+  padding: 12px;
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0088cc;
+}
+
+#responseMessage {
+  margin-top: 15px;
+  font-weight: bold;
+}

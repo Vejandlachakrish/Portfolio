@@ -1,0 +1,198 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Space Background */
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Twinkling Stars */
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/images/stars.png") repeat;
+  animation: twinkling 100s linear infinite;
+  z-index: -1;
+}
+
+.stars2 {
+  background: url("../assets/images/stars2.png") repeat;
+  animation-duration: 150s;
+}
+
+.stars3 {
+  background: url("../assets/images/stars3.png") repeat;
+  animation-duration: 200s;
+}
+
+@keyframes twinkling {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+/* Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #00aaff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+  text-shadow: 0 0 10px #00aaff;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  color: white;
+  margin-top: 100px;
+  border-radius: 10px;
+  height: 500px;
+  max-width: 500px;
+  box-shadow: 0px 5px 15px rgba(0, 170, 255, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Floating Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #00aaff;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077b5;
+  box-shadow: 0px 0px 10px rgba(0, 170, 255, 0.5);
+}
+
+/* Button */
+button {
+  padding: 12px;
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  background: #00aaff;
+  transform: scale(1.1);
+}
