@@ -272,12 +272,12 @@ nav ul li a:hover {
 }
 
 .skill-card:hover .skill-image img {
-  animation: rotate360 1.5s linear forwards;
+  animation: rotate10 1.5s linear forwards;
 }
 
-@keyframes rotate360 {
+@keyframes rotate10 {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(10deg);
   }
 }
 
